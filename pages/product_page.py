@@ -21,3 +21,11 @@ class ProductPage(BasePage):
         basket_price = self.browser.find_element(
             *ProductPageLocators.BASKET_PRICE).text
         assert product_price in basket_price, 'Basket price don\'t match with product price'
+
+    def should_not_be_success_message(self):
+        assert self.is_not_element_present(
+            *ProductPageLocators.PRODUCT_IN_MESSAGE),\
+        'success message should not appear after add product in basket'
+        
+    def should_dissapear_of_success_message(self):
+        pass
