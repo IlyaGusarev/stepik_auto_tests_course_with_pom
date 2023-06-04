@@ -24,8 +24,10 @@ class ProductPage(BasePage):
 
     def should_not_be_success_message(self):
         assert self.is_not_element_present(
-            *ProductPageLocators.PRODUCT_IN_MESSAGE),\
-        'success message should not appear after add product in basket'
-        
+            *ProductPageLocators.SUCCESS_MESSAGE),\
+            'success message should not appear'
+
     def should_dissapear_of_success_message(self):
-        pass
+        assert self.is_disappeared(
+            *ProductPageLocators.SUCCESS_MESSAGE),\
+            'Success message not disappear'

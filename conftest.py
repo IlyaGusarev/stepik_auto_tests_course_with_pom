@@ -49,3 +49,8 @@ def browser(request):
         )
     yield browser
     browser.quit()
+
+
+@pytest.fixture(scope='function')
+def url_link():
+    return 'http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207'
