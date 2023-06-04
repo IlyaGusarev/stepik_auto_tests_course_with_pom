@@ -52,5 +52,15 @@ def browser(request):
 
 
 @pytest.fixture(scope='function')
-def url_link():
+def link_product_page():
     return 'http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207'
+
+
+@pytest.fixture(scope='function')
+def link_for_test_login_on_product_page():
+    return 'http://selenium1py.pythonanywhere.com/en-gb/catalogue/the-city-and-the-stars_95/'
+
+
+@pytest.fixture(scope='function')
+def link_main_page():
+    return 'http://selenium1py.pythonanywhere.com/'
