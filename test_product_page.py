@@ -73,7 +73,6 @@ def test_guest_cant_see_success_message_after_adding_product_to_basket(
     product_page.should_not_be_success_message()
 
 
-@pytest.mark.skip
 def test_guest_cant_see_success_message(browser, link_product_page):
     product_page = ProductPage(browser, link_product_page)
     product_page.open()
