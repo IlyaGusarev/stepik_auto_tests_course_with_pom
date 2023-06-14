@@ -6,7 +6,6 @@ from .pages.login_page import LoginPage
 from .pages.basket_page import BasketPage
 
 
-# @pytest.mark.skip
 @pytest.mark.login_guest
 class TestLoginFromMainPage():
     def test_guest_can_go_to_login_page(self, browser, link_main_page):
